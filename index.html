@@ -1,0 +1,860 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Home</title>
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous" /> -->
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="style/style.css" rel="stylesheet" />
+    <script src="js/function.js"/></script>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-grey fixed-top">
+        <div class="container">
+            <a class="navbar-brand ms-auto" href="">
+                <img src="" height="16" alt="" loading="lazy" style="margin-top: -1px" />
+            </a>
+            <a class="d-flex me-auto nav-link" href="index.html">
+                <span class="red-color fs-3 fw-bold">Mama</span><span class="text-dark fs-3 fw-bold">Snack</span>
+            </a>
+            <div class="collapse navbar-collapse w-100 ms-auto me-auto" id="navbarButtonsExample">
+                <div class="d-flex justify-content-center ms-auto me-auto">
+                    <a class="fw-bold text-secondary nav-link mx-4 my-2 nav-menu" href="" data-bs-toggle="modal" data-bs-target="#chat-modal">Chat</a>
+                    <a class="text-secondary fw-bold nav-link mx-4 my-2 nav-menu" href="product/product.html">Produk</a>
+                    <a class="fw-bold text-secondary nav-link mx-4 my-2 nav-menu" href="admin_list_konten.php">Akun</a>
+                    
+                    
+                </div>
+            </div>
+            <!-- <div class="input-group d-flex justify-content-end">
+                <div class="">
+                    <input type="search" id="search" class="form-control w-50 ms-auto bg-light"
+                        placeholder="Cari... " />
+                </div>
+                <button type="button" class="btn btn-light me-2" data-bs-toggle="modal" data-bs-target="#search_modal">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-search" viewBox="0 0 16 16">
+                        <path
+                            d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+                    </svg>
+                </button>
+            </div> -->
+            <a href="product/product_cart.html" type="button" class="btn bg-grey">
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+                    class="bi bi-cart-check text-secondary" viewBox="0 0 16 16">
+                    <path
+                        d="M11.354 6.354a.5.5 0 0 0-.708-.708L8 8.293 6.854 7.146a.5.5 0 1 0-.708.708l1.5 1.5a.5.5 0 0 0 .708 0l3-3z" />
+                    <path
+                        d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zm3.915 10L3.102 4h10.796l-1.313 7h-8.17zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z" />
+                </svg>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarButtonsExample" aria-controls="navbarButtonsExample" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list"
+                    viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
+                </svg>
+            </button>
+        </div>
+    </nav>
+
+    <br />
+    <br />
+    <br />
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-6 col-12">
+                <div>
+                    <br />
+                    <br />
+                    <h1 class="fw-bold text-dark ms-5 mt-5 d-none d-lg-block" id="carousel-title">
+                        Nikmati mie paling enak di nusantara
+                    </h1>
+                    <p class="fw-bold text-dark ms-5 fs-1 mt-5 d-lg-none" id="carousel-title">
+                        Nikmati mie paling enak di nusantara
+                    </p>
+                    <p class="fs-4 ms-5 mt-3">
+                        Mulai belanja dengan keistimewaan sebagai member atau mau lihat-lihat dulu? Keputusan ada di jari kamu
+                    </p>
+                </div>
+                <div>
+                    <a class="btn btn-danger ms-5 mt-3 col-3 py-3 button-radius" href="#mie-populer">
+                        Mulai
+                    </a>
+                    <button class="btn btn-outline-danger ms-5 mt-3 col-3 py-3 button-radius" data-bs-toggle="modal" data-bs-target="#login-modal">
+                        Belanja
+                    </button>
+                </div>
+            </div>
+            <div class="col-lg-6 d-none d-md-block">
+                <!-- Carousel -->
+                <div id="carouselExampleControls" class="carousel slide carousel-fade mb-5" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active" data-bs-interval="2000">
+                            <img src="image/Mie Goreng Jawa.png" class="d-block w-100" />
+                            <div class="carousel-caption d-none d-md-block"></div>
+                        </div>
+                        <div class="carousel-item" data-bs-interval="2000">
+                            <img src="image/Mie Celor Palembang.png" class="d-block w-100" />
+                            <div class="carousel-caption d-none d-md-block"></div>
+                        </div>
+                        <div class="carousel-item" data-bs-interval="2000">
+                            <img src="image/Mie Aceh.png" class="d-block w-100" />
+                            <div class="carousel-caption d-none d-md-block"></div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <br>
+    <br>
+    <div class="container-fluid bg-white" id="mie-populer">
+        <h1 class="text-center text-dark fw-bold pt-2">
+            Mie paling populer di Indonesia
+        </h1>
+        <p class="text-dark text-center fs-5 fw-light w-100 ms-auto me-auto mb-5">
+            Kami memberikan mie paling populer berdasarkan review pengguna kami
+        </p>
+        <div class="container bg-white carousel-radius g-0">
+            <div id="carouselPopulerProduct" class="carousel slide mb-5" data-bs-touch="false" data-bs-interval="false">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="row">
+                            <div class="col-7">
+                                <h1 class="text-dark fw-bold mt-5 ms-5" id="carousel-title">Mie goreng jawa</h1>
+                                <p class="fs-5 text-dark mt-4 ms-5 fw-light">
+                                    Mie goreng jawa adalah mie paling populer di jawa, Mie ini dibuat dari rempah-rempah
+                                    tradisional yang tentunya sangat terjamin keasliannya
+                                </p>
+                                <div class="d-flex justify-content-start">
+                                    <button class="mt-3 btn btn-danger py-2 col-2 ms-5 button-radius">Beli</button>
+                                    <button class="mt-3 btn btn-outline-danger py-2 col-2 ms-5 button-radius"
+                                        data-bs-toggle="modal" data-bs-target="#mie-goreng-jawa">Lihat</button>
+                                </div>
+                            </div>
+                            <div class="col-5">
+                                <img src="image/Mie Goreng Jawa.png" class="d-block w-100 p-4" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="row">
+                            <div class="col-7">
+                                <h1 class="text-dark fw-bold mt-5 ms-5" id="carousel-title">Mie celor palembang</h1>
+                                <p class="fs-5 text-dark mt-4 ms-5 fw-light">
+                                    Mi Celor adalah hidangan mi yang berasal dari kota Palembang, Sumatra Selatan, Indonesia.
+                                    Mi disajikan dalam campuran kuah santan dan kaldu udang yang kental dan gurih dan disajikan 
+                                    dengan pelengkap seperti telur rebus, tauge, dan kucai.
+                                </p>
+                                <div class="d-flex justify-content-start">
+                                    <button class="mt-3 btn btn-danger py-2 col-2 ms-5 button-radius">Beli</button>
+                                    <button
+                                        class="mt-3 btn btn-outline-danger py-2 col-2 ms-5 button-radius"
+                                        data-bs-toggle="modal" data-bs-target="#mie-celor-palembang">Lihat</button>
+                                </div>
+                            </div>
+                            <div class="col-5">
+                                <img src="image/Mie Celor Palembang.png" class="d-block w-100 p-4" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="row">
+                            <div class="col-7">
+                                <h1 class="text-dark fw-bold mt-5 ms-5" id="carousel-title">Mie aceh</h1>
+                                <p class="fs-5 text-dark mt-4 ms-5 fw-light">
+                                    Mie goreng jawa adalah mie paling populer di jawa, Mie ini dibuat dari rempah-rempah
+                                    tradisional yang tentunya sangat terjamin keasliannya
+                                </p>
+                                <div class="d-flex justify-content-start">
+                                    <button class="mt-3 btn btn-danger py-2 col-2 ms-5 button-radius">Beli</button>
+                                    <button
+                                        class="mt-3 btn btn-outline-danger py-2 col-2 ms-5 button-radius">Lihat</button>
+                                </div>
+                            </div>
+                            <div class="col-5">
+                                <img src="image/Mie Aceh.png" class="d-block w-100 p-4" />
+                                <div class="carousel-caption d-none d-md-block"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselPopulerProduct"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon me-auto btn btn-danger py-5" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselPopulerProduct"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon ms-auto btn btn-danger py-5" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!--Modal button-->
+    
+    <!--All Modal List-->
+    <!-- Chat page modal -->
+    <div class="modal fade" id="chat-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content modal-radius modal-lg container-fluid bg-white">
+
+                <div class="modal-body">
+                    <form action="">
+                    <div class="row d-flex justify-content-center">
+                        <p class="fs-4 text-dark">Dukungan chat</p>
+                        <div class="col-6">
+                            <input type="text" class="form-control" placeholder="Nama...">
+                        </div>
+                        <div class="col-6">
+                            <input type="text" class="form-control" placeholder="Email...">
+                        </div>
+                        <p class="my-3">Katakan kepada kami, apa yang bisa kami bantu untuk anda</p>
+                        <div class="form-check ms-3">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                            <label class="form-check-label" for="flexRadioDefault1">
+                                Bagaimana cara membayar ?
+                            </label>
+                        </div>
+                        <div class="form-check ms-3">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+                            <label class="form-check-label" for="flexRadioDefault2">
+                                Opsi untuk membayar ada apa saja ?
+                            </label>
+                        </div>
+                        <div class="form-check ms-3">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                            <label class="form-check-label" for="flexRadioDefault1">
+                                Kapan barang akan dikirim untuk saya ?
+                            </label>
+                        </div>
+                        <div class="form-check ms-3">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+                            <label class="form-check-label" for="flexRadioDefault2">
+                                Promonya akan sebesar apa ?
+                            </label>
+                        </div>
+                        <p class="mt-2">Lainnya</p>
+                        <div class="mx-3">
+                            <input type="text" name="" id="" class="form-control">
+                        </div>
+                        <div class="d-flex justify-content-end">
+                            <button class="btn btn-danger mt-2 px-3 mx-2" data-bs-dismiss="modal">
+                                Batal
+                            </button>
+                            <button class="btn btn-outline-danger mt-2 px-3 mx-2">
+                                Kirim
+                            </button>
+                        </div>
+                    </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Register page modal -->
+    <div class="modal fade" id="register-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content modal-radius modal-lg container-fluid bg-white">
+
+                <div class="modal-body">
+                    <form action="">
+                    <div class="row">
+                        <div class="col-6">
+                            <p class="fs-4 fw-bold text-danger text-center mt-5">Daftar</p>
+                            <div class="input-group my-4">
+                                <span class="m-2 me-4 bg-white" id="username">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
+                                        <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                                    </svg>
+                                </span>
+                                <input type="text" class="form-control" placeholder="Nama..." aria-label="Username" aria-describedby="username">
+                            </div>
+                            <div class="input-group my-4">
+                                <span class="m-2 me-4 bg-white" id="username">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-envelope-fill" viewBox="0 0 16 16">
+                                        <path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555ZM0 4.697v7.104l5.803-3.558L0 4.697ZM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757Zm3.436-.586L16 11.801V4.697l-5.803 3.546Z"/>
+                                    </svg>
+                                </span>
+                                <input type="text" class="form-control" placeholder="Email..." aria-label="Username" aria-describedby="username">
+                            </div>
+                            <div class="input-group my-4">
+                                <span class="m-2 me-4 bg-white" id="username">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-lock-fill" viewBox="0 0 16 16">
+                                        <path d="M8 1a2 2 0 0 1 2 2v4H6V3a2 2 0 0 1 2-2zm3 6V3a3 3 0 0 0-6 0v4a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2z"/>
+                                    </svg>
+                                </span>
+                                <input type="text" class="form-control" placeholder="Kata sandi..." aria-label="Username" aria-describedby="username">
+                            </div>
+                            <div class="input-group my-4">
+                                <span class="m-2 me-4 bg-white" id="username">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-key-fill" viewBox="0 0 16 16">
+                                        <path d="M3.5 11.5a3.5 3.5 0 1 1 3.163-5H14L15.5 8 14 9.5l-1-1-1 1-1-1-1 1-1-1-1 1H6.663a3.5 3.5 0 0 1-3.163 2zM2.5 9a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
+                                    </svg>
+                                </span>
+                                <input type="text" class="form-control" placeholder="Konfirmasi kata sandi..." aria-label="Username" aria-describedby="username">
+                            </div>
+                            <div class="form-check ms-3">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                <label class="form-check-label row" for="flexCheckDefault">
+                                    <span class="">Saya setuju dengan <a href="" class="text-danger">syarat dan ketentuan</a></span>
+                                </label>
+                            </div>
+                            <div class="d-flex justify-content-center">
+                                <button class="btn btn-outline-danger mt-4 mb-5 px-3 mx-2">
+                                    Daftar
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="col-6">
+                            <img src="image/signUp.png" class="img-fluid mt-5" alt="">
+                        </div>
+                        
+                    </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Login page modal -->
+    <div class="modal fade" id="login-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content modal-radius modal-lg container-fluid bg-white">
+
+                <div class="modal-body">
+                    <form action="">
+                    <div class="row">
+                        <div class="col-6">
+                            <p class="fs-4 fw-bold text-danger text-center mt-5">Masuk</span></p>
+                            
+                            <div class="input-group my-4">
+                                <span class="m-2 me-4 bg-white" id="username">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
+                                        <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                                    </svg>
+                                </span>
+                                <input type="text" class="form-control" placeholder="Nama atau email..." aria-label="Username" aria-describedby="username">
+                            </div>
+                            <div class="input-group my-4">
+                                <span class="m-2 me-4 bg-white" id="password">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-key-fill" viewBox="0 0 16 16">
+                                        <path d="M3.5 11.5a3.5 3.5 0 1 1 3.163-5H14L15.5 8 14 9.5l-1-1-1 1-1-1-1 1-1-1-1 1H6.663a3.5 3.5 0 0 1-3.163 2zM2.5 9a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
+                                    </svg>
+                                </span>
+                                <input type="text" class="form-control" placeholder="Kata sandi..." aria-label="Username" aria-describedby="password">
+                            </div>
+                            <p class="text-dark text-start">Belum punya akun ? <a href="" class="text-danger" data-bs-toggle="modal" data-bs-target="#register-modal" data-bs-dismiss="modal">Daftar disini</a></p>
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="form-check ms-2">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                        <label class="form-check-label" for="flexCheckDefault">
+                                            Ingat saya
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-6 text-end text-dark">
+                                    <a href="" class="text-dark">Lupa password</a>
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-center">
+                                <button class="btn btn-outline-danger mt-4 px-3 mx-2">
+                                    Masuk
+                                </button>
+                            </div>
+                            <p class="my-3 fw-light text-center">- Atau masuk dengan -</p>
+                            <div class="d-flex justify-content-center mb-5">
+                                <button class="btn bg-danger col-3 d-flex justify-content-center py-2 mx-2 login-optional-radius">       
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-google text-white" viewBox="0 0 16 16">
+                                        <path d="M15.545 6.558a9.42 9.42 0 0 1 .139 1.626c0 2.434-.87 4.492-2.384 5.885h.002C11.978 15.292 10.158 16 8 16A8 8 0 1 1 8 0a7.689 7.689 0 0 1 5.352 2.082l-2.284 2.284A4.347 4.347 0 0 0 8 3.166c-2.087 0-3.86 1.408-4.492 3.304a4.792 4.792 0 0 0 0 3.063h.003c.635 1.893 2.405 3.301 4.492 3.301 1.078 0 2.004-.276 2.722-.764h-.003a3.702 3.702 0 0 0 1.599-2.431H8v-3.08h7.545z"/>
+                                    </svg>                    
+                                </button>
+                                <button class="btn bg-dark col-3 d-flex justify-content-center py-2 mx-2 login-optional-radius">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-apple text-white" viewBox="0 0 16 16">
+                                        <path d="M11.182.008C11.148-.03 9.923.023 8.857 1.18c-1.066 1.156-.902 2.482-.878 2.516.024.034 1.52.087 2.475-1.258.955-1.345.762-2.391.728-2.43zm3.314 11.733c-.048-.096-2.325-1.234-2.113-3.422.212-2.189 1.675-2.789 1.698-2.854.023-.065-.597-.79-1.254-1.157a3.692 3.692 0 0 0-1.563-.434c-.108-.003-.483-.095-1.254.116-.508.139-1.653.589-1.968.607-.316.018-1.256-.522-2.267-.665-.647-.125-1.333.131-1.824.328-.49.196-1.422.754-2.074 2.237-.652 1.482-.311 3.83-.067 4.56.244.729.625 1.924 1.273 2.796.576.984 1.34 1.667 1.659 1.899.319.232 1.219.386 1.843.067.502-.308 1.408-.485 1.766-.472.357.013 1.061.154 1.782.539.571.197 1.111.115 1.652-.105.541-.221 1.324-1.059 2.238-2.758.347-.79.505-1.217.473-1.282z"/>
+                                        <path d="M11.182.008C11.148-.03 9.923.023 8.857 1.18c-1.066 1.156-.902 2.482-.878 2.516.024.034 1.52.087 2.475-1.258.955-1.345.762-2.391.728-2.43zm3.314 11.733c-.048-.096-2.325-1.234-2.113-3.422.212-2.189 1.675-2.789 1.698-2.854.023-.065-.597-.79-1.254-1.157a3.692 3.692 0 0 0-1.563-.434c-.108-.003-.483-.095-1.254.116-.508.139-1.653.589-1.968.607-.316.018-1.256-.522-2.267-.665-.647-.125-1.333.131-1.824.328-.49.196-1.422.754-2.074 2.237-.652 1.482-.311 3.83-.067 4.56.244.729.625 1.924 1.273 2.796.576.984 1.34 1.667 1.659 1.899.319.232 1.219.386 1.843.067.502-.308 1.408-.485 1.766-.472.357.013 1.061.154 1.782.539.571.197 1.111.115 1.652-.105.541-.221 1.324-1.059 2.238-2.758.347-.79.505-1.217.473-1.282z"/>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="col-6">
+                            
+                            <img src="image/login2.png" class="img-fluid mt-5" alt="">
+                        </div>
+                        
+                    </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Mie goreng jawa modal-->
+    <div class="modal fade" id="mie-goreng-jawa" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content modal-radius modal-lg container-fluid bg-white">
+
+                <div class="modal-body">
+                    <div class="row d-flex justify-content-center">
+                        <div class="col-md-12">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="images">
+                                        <div class="text-center"> <img id="main-image" src="image/finalgorengjawa1.png"
+                                                class="w-100 detail-image-radius" /> </div>
+
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="">
+
+                                        <div class="mt-2 mb-3"> <span class="text-muted brand">JAWA</span>
+                                            <h3 class="text-dark fw-bold">Mie Goreng Jawa</h3>
+                                            <p class="fw-bold fs-4 text-danger">25.000</p>
+                                        </div>
+                                        <p class="text-dark">Mie goreng khas jawa yang memiliki citarasa khas. Dibuat
+                                            dari bahan pilihan dan juga bebas dari pengawet</p>
+                                        <div class="mt-4 d-flex justify-content-center">
+                                            <button class="btn btn-outline-danger col-4 mx-1">Beli</button>
+                                            <button class="btn btn-outline-danger col-4 mx-1">Keranjang</button>
+                                            <button class="btn btn-danger col-2 mx-1">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                    fill="currentColor" class="bi bi-heart-fill text-white"
+                                                    viewBox="0 0 16 16">
+                                                    <path fill-rule="evenodd"
+                                                        d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z" />
+                                                </svg>
+                                            </button>
+                                        </div>
+                                        <div class="text-center mt-3 align-bottom"> <img onclick="change_image(this)"
+                                                class="indicator-detail-image" src="image/finalgorengjawa1.png"
+                                                width="70"> <img onclick="change_image(this)" src="image/Mie Aceh.png"
+                                                class="indicator-detail-image" width="70"> 
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Mie Celor Palembang modal-->
+    <div class="modal fade" id="mie-celor-palembang" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content modal-radius modal-lg container-fluid bg-white">
+
+                <div class="modal-body">
+                    <div class="row d-flex justify-content-center">
+                        <div class="col-md-12">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="images">
+                                        <div class="text-center"> <img id="main-image" src="image/finalgorengjawa1.png"
+                                                class="w-100 detail-image-radius" /> 
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="">
+                                        <div class="mt-2 mb-3"> <span class="text-muted brand">JAWA</span>
+                                            <h3 class="text-dark fw-bold">Mie Celor Palembang</h3>
+                                            <p class="fw-bold fs-4 text-danger">25.000</p>
+                                        </div>
+                                        <p class="text-dark">Mi Celor adalah hidangan mi yang berasal dari kota Palembang, Sumatra Selatan, Indonesia.
+                                    Mi disajikan dalam campuran kuah santan dan kaldu udang yang kental dan gurih dan disajikan 
+                                    dengan pelengkap seperti telur rebus, tauge, dan kucai.</p>
+                                        <div class="mt-4 d-flex justify-content-center">
+                                            <button class="btn btn-outline-danger col-4 mx-1">Beli</button>
+                                            <button class="btn btn-outline-danger col-4 mx-1">Keranjang</button>
+                                            <button class="btn btn-danger col-2 mx-1">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                    fill="currentColor" class="bi bi-heart-fill text-white"
+                                                    viewBox="0 0 16 16">
+                                                    <path fill-rule="evenodd"
+                                                        d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z" />
+                                                </svg>
+                                            </button>
+                                        </div>
+
+                                        <div class="text-center mt-3 align-bottom"> <img onclick="change_image(this)"
+                                                class="indicator-detail-image" src="image/finalgorengjawa1.png"
+                                                width="70"> <img onclick="change_image(this)" src="image/Mie Aceh.png"
+                                                class="indicator-detail-image" width="70"> </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    <!-- <div class="container-fluid bg-white">
+        <h1 class="text-center text-dark fw-bold pt-2">
+            Mie dari berbagai provinsi di Indonesia
+        </h1>
+        <p class="text-dark text-center fs-5 fw-light w-100 ms-auto me-auto mb-5">
+            Kami memberikan beberapa Mie terbaik dari berbagai provinsi di Indonesia
+        </p>
+        
+        <div class="container bg-white carousel-radius g-0">
+            <div id="carouselProvinsi" class="carousel slide mb-5" data-bs-touch="false" data-bs-interval="false">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="row">
+                            <div class="col-6">
+                                <div>
+                                    <br />
+                                    <br />
+                                    <h1 class="fw-bolder ms-5 mt-5 block-text" id="carousel-title">
+                                        Sumatra Utara
+                                    </h1>
+                                    <p class="fs-4 ms-5 mt-3">
+                                        Mie dengan citarasa pedas yang sangat khas, dan dilengkapi dengan rempah-rempah
+                                    </p>
+                                </div>
+                                <div>
+                                    <button class="btn btn-danger ms-5 mt-3 col-3 py-3 button-radius">
+                                        Lihat
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <img src="image/Mie Celor Palembang.png" class="d-block w-100 p-4" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="row">
+                            <div class="col-6">
+                                <div>
+                                    <br />
+                                    <br />
+                                    <h1 class="fw-bolder ms-5 mt-5 block-text" id="carousel-title">
+                                        Jawa
+                                    </h1>
+                                    <p class="fs-4 ms-5 mt-3">
+                                        Mie dengan citarasa pedas yang sangat khas, dan dilengkapi dengan rempah-rempah
+                                    </p>
+                                </div>
+                                <div>
+                                    <button class="btn btn-danger ms-5 mt-3 col-3 py-3 button-radius">
+                                        Lihat
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <img src="image/Mie Goreng Jawa.png" class="d-block w-100 p-4" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="row">
+                            <div class="col-6">
+                                <div>
+                                    <br />
+                                    <br />
+                                    <h1 class="fw-bolder ms-5 mt-5 block-text" id="carousel-title">
+                                        Medan
+                                    </h1>
+                                    <p class="fs-4 ms-5 mt-3">
+                                        Mie dengan citarasa pedas yang sangat khas, dan dilengkapi dengan rempah-rempah
+                                    </p>
+                                </div>
+                                <div>
+                                    <button class="btn btn-danger ms-5 mt-3 col-3 py-3 button-radius">
+                                        Lihat
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <img src="image/Mie Celor Palembang.png" class="d-block w-100 p-4" />
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselProvinsi"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon me-auto btn btn-danger py-5" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselProvinsi"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon ms-auto btn btn-danger py-5" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+
+            </div>
+        </div>
+
+        
+    </div> -->
+
+
+
+
+
+
+
+<!--Card product-->
+    <!-- <div class="container">
+                <div class="row bg-white p-2 carousel-radius">
+                    <div class="col-6 col-lg-3">
+                        <div class="card card-radius raise" style="width: 18rem;">
+                        <img src="image/finalgorengjawa1.png" class="card-img-top card-image-radius" alt="...">
+                        
+                            <div class="card-body">
+                                <span class="fw-light text-dark">Jawa</span>
+                                <h5 class="text-dark fw-bold">Mie Goreng Jawa</h5>
+                                <p class="text-dark fw-lighter">Harga: </p>
+                                <span class="fw-bold fs-5 text-danger">25.000</span><sup><span class="fw-light fs-6 text-dark ms-1"><del class="text-dark">30.000</del></span></sup>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div> -->
+
+    <div class="container-fluid mt-5">
+        <h1 class="text-center text-dark fw-bold pt-2">
+            Mengapa anda harus memilih kami?
+        </h1>
+        <p class="text-dark text-center fs-5 fw-light w-100 ms-auto me-auto mb-5">
+            Kami akan memberikan berbagai macam keistimewaan untuk customer kami.
+        </p>
+
+        <div class="container">
+            <div class="row reveal fade-right">
+                <div class="col-6">
+                    <div>
+                        <br />
+                        <br />
+                        <h1 class="fw-bolder ms-5 mt-5 block-text" id="carousel-title">
+                            Mie populer
+                        </h1>
+                        <p class="fs-4 ms-5 mt-3">
+                            Kami akan selalu memberikan mie paling populer yang tersebar di berbagai wilayah di
+                            Indonesia.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <img src="image/star.png" class="d-block w-100 p-4" />
+                </div>
+            </div>
+
+            <!-- this -->
+            <div class="row reveal fade-left">
+                <div class="col-6">
+                    <img src="image/uang.png" class="d-block w-100 p-4" />
+                </div>
+                <div class="col-6">
+                    <div>
+                        <br />
+                        <br />
+                        <h1 class="fw-bolder ms-5 mt-5 block-text" id="carousel-title">
+                            Harga terjangkau
+                        </h1>
+                        <p class="fs-4 ms-5 mt-3">
+                            Kami akan selalu memberikan mie paling populer yang tersebar di berbagai wilayah di
+                            Indonesia.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-6">
+                    <div>
+                        <br />
+                        <br />
+                        <h1 class="fw-bolder ms-5 mt-5 block-text" id="carousel-title">
+                            Anda tertarik ?
+                        </h1>
+                        <p class="fs-4 ms-5 mt-3">
+                            Ayo bergabung dengan kami dan mulai belanja.
+                        </p>
+                        <button class="btn btn-danger ms-5 mt-3 col-3 py-3 button-radius" data-bs-toggle="modal" data-bs-target="#register-modal">
+                            Daftar
+                        </button>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <img src="image/Mie Celor Palembang.png" class="d-block w-100 p-4" />
+                </div>
+            </div>
+        </div>
+    </div>
+
+        <footer class="text-center text-lg-start text-dark bg-white">
+            <!-- Section: Social media -->
+            <div class="d-flex justify-content-between text-white p-4 bg-danger">
+                <!-- Left -->
+                <div class="me-5">
+                    <span>Tetap terhubung dengan kami:</span>
+                </div>
+                <!-- Left -->
+
+                <!-- Right -->
+                <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-facebook me-4" viewBox="0 0 16 16">
+                        <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-instagram me-4" viewBox="0 0 16 16">
+                        <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"/>
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-envelope-fill me-4" viewBox="0 0 16 16">
+                        <path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555ZM0 4.697v7.104l5.803-3.558L0 4.697ZM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757Zm3.436-.586L16 11.801V4.697l-5.803 3.546Z"/>
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-whatsapp me-4" viewBox="0 0 16 16">
+                        <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/>
+                    </svg>
+                </div>
+                <!-- Right -->
+            </div>
+            <!-- Section: Social media -->
+
+            <!-- Section: Links  -->
+            <section class="">
+                <div class="container text-center text-md-start mt-5">
+                    <!-- Grid row -->
+                    <div class="row mt-3">
+                        <!-- Grid column -->
+                        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                            <!-- Content -->
+                            <h5 class="fw-bold ms-3">Tentang kami</h5>
+                            
+                            <span>
+                                <a href="#!" class="text-dark nav-link fw-light">Tentang kami</a>
+                            </span>
+                            <span>
+                                <a href="#!" class="text-dark nav-link fw-light">Sejarah kami</a>
+                            </span>
+                            <span>
+                                <a href="#!" class="text-dark nav-link fw-light">Perkembangan produk</a>
+                            </span>
+                            <span>
+                                <a href="#!" class="text-dark nav-link fw-light">Berita dan notifikasi</a>
+                            </span>
+                        </div>
+                        <!-- Grid column -->
+
+                        <!-- Grid column -->
+                        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                            <!-- Links -->
+                            <h5 class="fw-bold ms-3">Pelayanan</h5>
+                            <span>
+                                <a href="#!" class="text-dark nav-link fw-light">Pusat bantuan</a>
+                            </span>
+                            <span>
+                                <a href="#!" class="text-dark nav-link fw-light">Komplain</a>
+                            </span>
+                            <span>
+                                <a href="#!" class="text-dark nav-link fw-light">Operasional</a>
+                            </span>
+                            <span>
+                                <a href="#!" class="text-dark nav-link fw-light">Standard</a>
+                            </span>
+                        </div>
+                        <!-- Grid column -->
+
+                        <!-- Grid column -->
+                        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+                            <!-- Links -->
+                            <h5 class="fw-bold ms-3">Pesanan</h5>
+                            <span>
+                                <a href="#!" class="text-dark nav-link fw-light">Pesan lewat web</a>
+                            </span>
+                            <span>
+                                <a href="#!" class="text-dark nav-link fw-light">Pesan lewat Shoope</a>
+                            </span>
+                            <span>
+                                <a href="#!" class="text-dark nav-link fw-light">Pesan lewat Tokopedia</a>
+                            </span>
+                            <span>
+                                <a href="#!" class="text-dark nav-link fw-light">Pesan lewat toko offline</a>
+                            </span>
+                        </div>
+                        <!-- Grid column -->
+
+                        <!-- Grid column -->
+                        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                            <!-- Links -->
+                            <h5 class="fw-bold ms-3">Hubungi kami</h5>
+                            <span class="text-dark nav-link fw-light">
+                                Surabaya, Jawa timur, Indonesia
+                            </span>
+                            <span class="text-dark nav-link fw-light">
+                                ......@gmail.com
+                            </span>
+                            <span class="text-dark nav-link fw-light">
+                                +62 12345678911
+                            </span>
+                            <span class="text-dark nav-link fw-light">
+                                +62 12345678910
+                            </span>
+                        </div>
+                        <!-- Grid column -->
+                    </div>
+                    <!-- Grid row -->
+                </div>
+            
+            <!-- Section: Links  -->
+
+            <!-- Copyright -->
+            <div class="text-center text-dark p-3 bg-grey">
+                <span> © 2022 Copyright:</span>
+                <span class="text-dark">..../.com</span>
+            </div>
+            </section>
+            <!-- Copyright -->
+        </footer>
+        <!-- Footer -->
+
+        <script>
+            
+        </script>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+            integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+            integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+            crossorigin="anonymous"></script>
+
+
+
+        <!-- <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
+        integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js"
+        integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script> -->
+</body>
+
+</html>
